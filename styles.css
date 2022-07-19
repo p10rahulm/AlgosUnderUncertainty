@@ -1,0 +1,63 @@
+.links-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 50px;
+}
+
+.links-item {
+    font-size: medium;
+    flex-basis: 150px;
+    text-align: center;
+    align-content: center;
+    align-self: center;
+    margin: auto 0;
+    padding: 5px;
+}
+
+.section {
+    padding: 15px;
+    box-shadow: 5px 10px 18px #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 25px;
+}
+
+.inside-section {
+    padding: 10px 15px 5px 15px;
+}
+.weekly-classes{
+    padding: 5px 5px 10px 5px;
+    margin: 10px 5px 25px 5px;
+    border-radius: 10px;
+    box-shadow: 5px 7px 10px #f9f9f9;
+}
+
+.weekly-classes li{
+    padding: 2px 0px 4px min(20px, 2vw);
+}
+
+.section ul li{
+    padding: 2px 0px 2px min(20px, 2vw);
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    background: linear-gradient(to right, rgb(0, 54, 99), rgb(0, 54, 99)),
+                linear-gradient(to right,rgba(255, 0, 0, 1),rgba(255, 0, 180, 1),rgba(0, 100, 200, 1)
+    );
+    background-size: 100% 1px, 0 1px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 250ms;
+}
+
+a:hover {
+    background-size: 0 1px, 100% 1px;
+}
+

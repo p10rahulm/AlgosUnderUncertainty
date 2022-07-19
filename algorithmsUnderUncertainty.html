@@ -1,0 +1,578 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=us-ascii">
+    <title>E0 215: Algorithms under Uncertainty, Fall 2022</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h2>E0 215: Algorithms under Uncertainty, Fall 2022</h2>
+<dl>
+    <dd><b>Instructors</b>:
+        <a target="_blank" href="https://www.csa.iisc.ac.in/~barman/">Siddharth Barman</a>
+        and
+        <a target="_blank" href="https://www.csa.iisc.ac.in/~arindamkhan/">Arindam Khan</a>
+        <br>
+    </dd>
+    <dd><b>TA</b>:
+        Rahul Madhavan
+        <br>
+    </dd>
+    <dd><b>Time</b>: Tuesdays &amp; Thursdays, 02:00 PM-03:30 PM, CSA 112. <br>
+    </dd>
+</dl>
+
+
+<div class="section links-container">
+    <div class="links-item"><a href="#description">Course Description</a></div>
+    <div class="links-item"><a href="#lectures">Lectures</a></div>
+    <div class="links-item"><a href="#projects">Projects</a></div>
+    <div class="links-item"><a href="#refs">References</a></div>
+
+</div>
+
+
+<div class="section">
+    <h3><a name="description"></a>Course Description</h3>
+    <div class="inside-section">
+        <p>
+            <b>Tentative topics:</b> Basics of Probability, and various other topics
+        </p>
+        <p>
+            <b>Intended audience:</b> Graduate students in computer science and mathematics with theoretical interests.
+            Interested undergraduate students with very strong mathematical skills.
+        </p>
+        <p>
+            <b>Prerequisites</b>: Mathematical maturity and a solid background in math
+            (probability, algorithms, elementary combinatorics, graph theory, discrete probability, algebra, calculus)
+            and theoretical computer science (big-O/Omega/Theta, P/NP, basic fundamental algorithms).
+        </p>
+        <p>
+            <b>Grading:</b> 40% HW, 30% Projects, 30% Final.
+        </p>
+    </div>
+</div>
+<div class="section">
+    <h3><a name="lectures"></a>Lecture Schedule</h3>
+    <div class="inside-section">
+        <div class="weekly-classes">
+            <b>Refresher</b><br><br>
+            Probability Refresher:
+            <a target="_blank" href="https://www.csa.iisc.ac.in/~arindamkhan/courses/toolkit20/scribes/lect00.pdf">
+                Scribe notes from Toolkit</a>,
+            <a target="_blank"
+               href="https://www.csa.iisc.ac.in/~arindamkhan/courses/toolkit20/handwritten/ProbRefresher.pdf">
+                Handwritten notes</a>.
+        </div>
+        <div class="weekly-classes">
+            <b>Week 1</b><br><br>
+
+            <b>Basics, Paging/Caching.</b><br>
+            Basics, Competitive Ratio.<br>
+            Optimal Offline Paging,<br>
+            Deterministic Algorithms: Marking, Lower bounds.<br>
+            Randomized Algorithms: Adversary models, Mark algorithm (potential function based analysis)<br><br>
+            <b>Lower bounds:</b><br>
+            Yao's minimax.<br><br>
+            <b>Sources:</b><br> Ch 4: Vaze<br>
+            Borodin-ElYaniv Book: 3.4, 3.5, 4.1.1, 4.2, 4.3, 4.4.<br>
+        </div>
+
+        <div class="weekly-classes">
+            <b>Week 2</b><br><br>
+
+            <b>Doubling trick:</b> Online bidding and cow-path problem.<br>
+            [- From <a href="http://cs.brown.edu/~claire/Publis/chrobak.pdf" target="_blank">Chrobak-Kenyon
+            survey</a>]<br><br>
+            <b>Online Set Cover</b><br>
+            Potential-function based Algorithm.<br>
+            Pitt's Algorithm.<br>
+            [- From <a href="http://www.cs.tau.ac.il/~nogaa/PDFS/aaabnproc2.pdf" target="_blank">Online Set cover (by
+            Alon et al.) </a>
+            and <a href="https://www.cs.cmu.edu/afs/cs/academic/class/15854-f05/www/scribe/lec11.pdf" target="_blank">Lecture
+            notes by Anupam Gupta</a>]<br><br>
+            <b>Ski-rental.</b><br>
+            Ski-rental: deterministic and randomized algorithms!<br>
+            Yao's minimax lemma and lower bounds for randomized algorithms for ski-rental.<br>
+
+        </div>
+
+        <div class="weekly-classes">
+            <b>Week 3</b><br><br>
+            <b>Primal-Dual Analysis:</b><br>
+            Primal-Dual Algorithm for Ski-rental and Set Cover.
+            <br><br>
+            <b>Sources:</b><br>
+            Ch 1,2 Book by Vaze.<br>
+            Handwritten notes from a previous offering (E0249, 2020)<br>
+            <a href="https://www.tau.ac.il/~nivb/download/pd-survey.pdf" target="_blank">Primal-Dual Survey by
+                Buchbinder-Naor: Ch3,4.</a><br>
+            Also Ch 8 in Vaze.
+        </div>
+
+
+        <div class="weekly-classes">
+            <b>Week 4</b><br><br>
+
+            <b>Online Matching.</b><br>
+            Ranking, Economic-Bases Analysis.<br>
+            Ranking Analysis:
+            <a href="https://cs.brown.edu/~claire/Publis/sigactnews08.pdf" target="_blank">Birnbaum-Mathieu</a><br>
+            Economic Based analysis: <a href="https://arxiv.org/pdf/1804.06637.pdf" target="_blank">SOSA'21 paper by
+            Eden et al.</a><br><br>
+
+            <b>Sources:</b><br>
+            Ch 7 Book by Vaze.<br>
+            Handwritten notes from a previous offering (E0249, 2020)<br><br>
+            <b>Online Bin Packing.</b><br>
+            Next-Fit, harmonic, Weight Functions.<br><br>
+
+            <b>Other interesting topics/techniques in Online Algorithms:</b><br>
+            Dual-Fitting in Online Algorithms: (<a
+                href="https://www.win.tue.nl/~nikhil/AU16/scribe-notes/lec5/lecture5.pdf" target="_blank">scheduling on
+            unrelated machines</a>)<br>
+            Work-Function Methods: k-server.<br>
+            Online TSP/network design.<br>
+
+        </div>
+
+        <div class="weekly-classes">
+            <b>Week 5</b><br><br>
+
+            <b>Streaming Algorithms.</b><br>
+            Topics from the lectures taught in Toolkits:
+            <a href="https://www.csa.iisc.ac.in/~arindamkhan/courses/toolkit20/handwritten/StreamAlg1.pdf"
+               target="_blank">Handwritten Notes 1</a>,
+            <a href="https://www.csa.iisc.ac.in/~arindamkhan/courses/toolkit20/handwritten/StreamAlg2.pdf"
+               target="_blank">Handwritten Notes 2</a><br><br>
+            <b>Basics, Model, Finding Frequent Elements:</b><br>
+            Bayer-Moore Majority Voting Algo, Misra Gries Algorithms. AC Lec 0, 1.<br><br>
+            <b>Finding Moments of Data Stream:</b><br>
+            Flajolet-Martin Algorithm for F0, Hash Functions, k-wise independence. AC Lec 2.<br>
+            Finding frequent Items by Sketching: Count-Min Sketch. AC Lec 5. MPI 3.4.<br><br>
+            AC=Amit Chakrabarty's Lecture Notes
+
+        </div>
+
+        <div class="weekly-classes">
+            <b>Week 6</b><br><br>
+
+            <b>Random Order Arrival</b>: Secretary Problem<br>
+            <a href="https://arxiv.org/pdf/2002.12159.pdf" target="_blank">Random Order Models</a>: a survey by
+            Gupta-Singla Survey<br>
+            Ch 5/6 Vaze<br><br>
+            <b>IID Model</b><br><br>
+            <b>Algorithms with Predictions:</b><br>
+            <a href="https://arxiv.org/pdf/2006.09123.pdf" target="_blank">Roughgarden Book (chapter by Mitzenmacher and
+                Vassilvitskii)</a><br>
+            Binary Search and Ski-rental.
+
+
+        </div>
+        <div class="weekly-classes">
+            <b>Week 8-14</b><br><br>
+
+            Online Learning+MDPs.<br>
+            Online Convex optimization<br>
+            Follow the leader, Regularization<br>
+            Gradient Descent and Mirror Descent<br>
+            Experts (MWU, EXP3, FTRL,...)<br>
+            Bandits (UCB, Median elimination)<br>
+        </div>
+        <div class="weekly-classes">
+            <b>Extra Topics</b><br><br>
+
+            <b>Dynamic Algorithms</b><br>
+            <a href="http://www.cstheoryseminars.org/?talk=20211203_SayanBhattacharya"
+               target="_blank">Matching/Set Cover</a> by Sayan Bhattacharya<br>
+            <a href="https://arxiv.org/pdf/2004.09099.pdf"
+               target="_blank">Dynamic Matching Survey</a> by Henzinger et al.<br>
+            <a href="https://users.cs.duke.edu/~debmalya/papers/stoc17-setcover.pdf"
+               target="_blank">Dynamic Set Cover</a> by Gupta et al.<br>
+            <br>
+        </div>
+
+    </div>
+</div>
+
+<div class="section">
+    <h3>Important Dates:</h3>
+    <div class="inside-section">
+        <br> First day of class: 04 August, 2022.
+        <br> Course Registration Deadline: 18 August, 2022.
+        <br> Course drop deadline without mention: 17 October, 2022.
+        <br> Course drop deadline with mention: 15 Novermber, 2022.
+        <br> Final: 20 Nov 2022 to 09 Dec 2022 (exact date will be finalized later).
+    </div>
+</div>
+<div class="section">
+    <h3><a name="psets"></a>Assignments</h3>
+    <div class="inside-section">
+        Will be updated shortly.
+        <!--<ul>-->
+        <!--    <li><a href="https://www.csa.iisc.ac.in/~arindamkhan/courses/RandAlgo21/HW/ra21hw0.pdf">HW 0</a></li>-->
+        <!--</ul>-->
+    </div>
+</div>
+<div class="section">
+    <h3><a name="projects"></a>Project Topics</h3>
+    <ul>
+        <li><a target="_blank" href="https://arxiv.org/pdf/2004.09099.pdf">Dynamic Matching Survey</a> by Henzinger et
+            al.
+        </li>
+        <li><a target="_blank" href="https://users.cs.duke.edu/~debmalya/papers/stoc17-setcover.pdf">Dynamic Set
+            Cover</a> by Gupta et al.
+        </li>
+        <li>k-server problem</li>
+        <li>online network design</li>
+        <li>Dynamic graph algos (recent papers by Danupon and Sayan)</li>
+        <li>Streaming algos (some recent papers by Sepehr Assadi, Sanjeev Khanna, and Amit Chakraborty)</li>
+        <li>Online data compression</li>
+        <li>Online matching (recent papers by Zhiyi Huang)</li>
+        <li>Dynamic geometric algorithms (papers by Timothy Chan, Monika Henzinger, Andreas Wiese, Pankaj Agarwal,
+            etc.)
+        </li>
+        <li>Other topics in beyond worst case analysis (semirandom models etc.)</li>
+        <li>Self-organizing Data Structures.</li>
+        <li>Online load balancing.</li>
+        <li>Online bin packing.</li>
+        <li>Online Coloring.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h3><a name="refs"></a>References</h3>
+    <div class="inside-section">
+        We will be teaching materials from multiple books/sources. Some of them are the following.<br><br>
+        <div class="weekly-classes">
+            <b>Books:</b><br>
+            <ol type="a" start="1">
+                <li><a target="_blank"
+                       href="https://www.amazon.com/Online-Computation-Compet-Analysis-Borodin/dp/0521619467">Online
+                    Computation and Competitive Analysis:</a> Allan Borodin and Ran El Yaniv (An old but comprehensive
+                    book for pre-2000 algorithms).
+                </li>
+                <li><a target="_blank"
+                       href="https://www.amazon.in/Online-Algorithms-Lecture-Computer-Science/dp/3540649174/">
+                    Online Algorithms: The State of the Art</a> (Important algorithms from pre-1998).
+                </li>
+            </ol>
+        </div>
+        <div class="weekly-classes">
+            <b>Surveys/book chapters:</b><br>
+            <ol type="a" start="3">
+                <li><a target="_blank"
+                       href="http://www14.in.tum.de/personen/albers/papers/inter.pdf">Bookchaper
+                    by Susanne Albers</a> from 2003.
+                </li>
+                <li><a target="_blank"
+                       href="https://www.tau.ac.il/~nivb/download/pd-survey.pdf">
+                    Primal Dual Survey by Buchbinder and Naor</a>(See the videos and slides).
+                </li>
+            </ol>
+        </div>
+        <div class="weekly-classes">
+            <b>Recent Lecture Notes:</b> (with other related topics such as stochastic optimization, online learning,
+            online convex optimization)<br>
+            <ol type="a" start="5">
+                <li><a target="_blank"
+                       href="http://www.cs.cmu.edu/~15850/">CMU Advanced Algorithms, Fall 2018</a> (by Anupam Gupta) -
+                    one of the recent courses.
+                </li>
+                <li><a target="_blank"
+                       href="https://www.win.tue.nl/~nikhil/AU16/index.html">
+                    Algorithms and Uncertainty</a> (by Nikhil Bansal at Berkeley'16).
+                </li>
+                <li><a target="_blank"
+                       href="https://homes.cs.washington.edu/~jrl/teaching/cse599I-spring-2018/">
+                    Competitive analysis via convex optimization</a> (UW'18 by Bubeck and Lee).
+                </li>
+                <li><a target="_blank"
+                       href="https://sites.google.com/view/spring19course/lecture-schedule">
+                    Decision Making at Scale</a> (by Kamesh Munagala at Duke'18).
+                </li>
+                <li><a target="_blank"
+                       href="http://www.cs.tau.ac.il/~azar/online17-18.html">
+                    On-line and Approximation algorithms</a> (by Yossi Azar at TAU'18).
+                </li>
+                <li><a target="_blank"
+                       href="http://www.cs.umanitoba.ca/~kamalis/fall19/comp4060-7720.html">
+                    Online Algorithms</a> (by Shahin Kamali at U. Manitoba '18).
+                </li>
+                <li><a target="_blank"
+                       href="https://users.cs.duke.edu/~kamesh/UncertaintyCourse.html">
+                    Optimization and decision-making under uncertainty</a> (by Kamesh Munagala).
+                </li>
+                <li><a target="_blank"
+                       href="https://www.cs.huji.ac.il/course/2005/algo2/on-line/on-line-course.html">
+                    Online Algorithm</a> (by Yair Bartal).
+                </li>
+                <li><a target="_blank"
+                       href="https://iew.technion.ac.il/~ehazan/courses/decision10/decision.htm">
+                    Decision Analysis</a> (by Elad Hazan, mostly on online learning).
+                </li>
+                <li><a target="_blank"
+                       href="https://web.stanford.edu/~ashishg/msande325_09/">
+                    Topics in Stochastic Optimization </a> (by Ashish Goel).
+                </li>
+            </ol>
+        </div>
+        <div class="weekly-classes">
+            <b>Other special topics:</b><br>
+            <ol type="a" start="15">
+                <li><a target="_blank"
+                       href="http://www.cs.cmu.edu/~arielpro/15896s15/docs/paper13b.pdf">
+                    Online matching and ad allocation survey</a> (by Aranyak Mehta).
+                </li>
+                <li><a target="_blank"
+                       href="https://www.sciencedirect.com/science/article/abs/pii/S1574013716301356">
+                    Approximation and Online Algorithms for Multidimensional Bin Packing. </a> (by Arindam Khan '17).
+                    Link to presentation <a
+                            href="https://www.csa.iisc.ac.in/~arindamkhan/seminar/binpacking21/ppt/khansurveyppt.pdf"
+                            target="_blank">here</a>.
+                </li>
+                <li><a target="_blank"
+                       href="http://www14.in.tum.de/personen/albers/papers/sched_chapter.pdf">
+                    Online Scheduling Survey</a> (by Susanne Albers).
+                </li>
+                <li><a target="_blank"
+                       href="https://www.researchgate.net/profile/Patrick-Jaillet/publication/227029293_Online_Vehicle_Routing_Problems_A_Survey/links/02e7e53543dfa6c4a4000000/Online-Vehicle-Routing-Problems-A-Survey.pdf">
+                    Online Vehicle Routing Problems</a> (Survey by Jaillet & Wagner).
+                </li>
+                <li><a target="_blank"
+                       href="https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/182208/1/eth-50829-01.pdf">
+                    A Technique to Obtain Hardness Results for Randomized Online Algorithms - A Survey</a> (by
+                    Bockenhauer et al.).
+                </li>
+                <li><a target="_blank"
+                       href="https://www.semanticscholar.org/paper/Competitive-Analysis-of-Paging%3A-A-Survey-Irani/1e684e3736b4191bc7668b1a7a6044180f2fae1e?p2df">
+                    Competitive analysis of paging</a> (by S Irani'98).
+                </li>
+                <li><a target="_blank"
+                       href="https://dl.acm.org/doi/10.1145/2993749.2993766">
+                    Online Algorithms with Advice: A Survey.</a> (by Boyar et al.).
+                </li>
+            </ol>
+        </div>
+        <div class="weekly-classes">
+            <b>Older Lecture notes/courses:</b><br>
+            <ol type="a" start="22">
+                <li><a target="_blank"
+                       href="http://www.cs.cmu.edu/~avrim/Approx00/index.html">
+                    15-854 Approximation and Online Algorithms</a> ( by Avrim Blum at CMU'00).
+                </li>
+                <li><a target="_blank"
+                       href="https://cs.brown.edu/courses/csci2950-w/">
+                    CSCI 2950-w - Online Algorithms</a> (by Claire Mathieu at Brown'09).
+                </li>
+                <li><a target="_blank"
+                       href="https://www.cs.huji.ac.il/course/2005/algo2/on-line/on-line-course.html">
+                    CS 294-1 Home Page</a> (by Yair Bartal at HUJI'97) and
+                    <a target="_blank"
+                       href="https://www.cs.huji.ac.il/course/2005/algo2/on-line/on-line-course.html">
+                        CS 294-1</a> (by Yair Bartal at HUJI'05).
+                </li>
+                <li><a target="_blank"
+                       href="https://www.hni.uni-paderborn.de/fileadmin/Fachgruppen/Algorithmen/Lehre/Vorlesungsarchiv/SS2013/Online_Algorithms/OA_summary.pdf">
+                    Online Algorithms</a> (by Vanessa Petrausch at U Paderborn).
+                </li>
+                <li><a target="_blank"
+                       href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611973402.32">
+                    Competitive Analysis via Regularization</a> (by Buchbinder et al. '14).
+                </li>
+                <li><a target="_blank"
+                       href="http://web.stanford.edu/class/cs369/files/cs369-notes">
+                    CS369 lecture notes </a> (by Serge Plotkin at Stanford'13).
+                </li>
+            </ol>
+        </div>
+        <div class="weekly-classes">
+            <b>Workshops:</b><br>
+            <ol type="a" start="28">
+                <li>Algorithms and Uncertainty: <a target="_blank"
+                                                   href="https://simons.berkeley.edu/programs/uncertainty2016">Simons
+                    Institute for the Theory of Computing</a>.
+                </li>
+                <li><a target="_blank"
+                       href="http://www.lorentzcenter.nl/lc/web/2014/680/info.php3?wsid=680&venue=Oort">
+                    Online Algorithms and Learning Workshop</a> from 17 Nov 2014 through 21 Nov 2014.
+                </li>
+                <li><a target="_blank"
+                       href="http://math.haifa.ac.il/lea/MOLI.htm">
+                    Workshop</a> on modern algorithms.
+                </li>
+            </ol>
+        </div>
+
+
+        <!--        Similar courses elsewhere:-->
+        <!--        <ul>-->
+        <!--            <li><a target="_blank" href="https://arxiv.org/abs/1909.05207">Introduction to Online Convex Optimization by-->
+        <!--                Elad Hazan</a></li>-->
+        <!--        </ul>-->
+        <!--        Similar courses elsewhere:-->
+        <!--        <ul>-->
+        <!--            <li><a target="_blank" href="https://users.cs.duke.edu/~kamesh/UncertaintyCourse.html"> Optimization and-->
+        <!--                decision-making under uncertainty by Kamesh Munagala</a></li>-->
+        <!--            <li><a target="_blank" href="https://www.cs.huji.ac.il/course/2005/algo2/on-line/on-line-course.html">-->
+        <!--                Online-->
+        <!--                Algorithms by Yair Bartal</a></li>-->
+        <!--            <li><a target="_blank" href="https://web.stanford.edu/~ashishg/msande325_09/"> Topics in Stochastic-->
+        <!--                Optimization-->
+        <!--                by Ashish Goel</a></li>-->
+        <!--            <li><a target="_blank" href="http://www.cs.cmu.edu/~avrim/Approx00/index.html"> Approximation and Online-->
+        <!--                Algorithms by Avrim Blum</a></li>-->
+        <!--        </ul>-->
+    </div>
+</div>
+
+<div class="section">
+    <h3><a name="nikhils-course"></a>Topics from Nikhil's course:</h3>
+    <div class="inside-section">
+        <div class="weekly-classes">
+            <b>The k-server problem:</b><br><br>
+            We look at the k-server problem and proof that WFA is 2k-1 competitive (based on simpler proof in the paper
+            below).
+
+            <ol type="a" start="1">
+                <li><a target="_blank"
+                       href="https://ieeexplore.ieee.org/document/814616/">
+                    Weak Adversaries for the k-server problem </a> (by Elias Koutsoupias at FOCS'99).
+                </li>
+                <li><a target="_blank"
+                       href="https://www.cs.technion.ac.il/~rani/book.html">
+                    Background on k-server and work functions</a> (book by Borodin and El-Yaniv).
+                </li>
+                <li>Other lecture notes on the net.</li>
+            </ol>
+        </div>
+
+        <div class="weekly-classes">
+            <b>Content Resolution:</b><br>
+            <ol type="a" start="4">
+                <li><a target="_blank"
+                       href="https://epubs.siam.org/doi/10.1137/1.9781611974331.ch72">
+                    Online Contention Resolution Schemes </a> (by Moran Feldman, Ola Svensson, Rico Zenklusen at
+                    SODA'16).
+                </li>
+                <li><a target="_blank"
+                       href="http://thibaut.horel.org/submodularity/notes/03-05.pdf">
+                    Background on (offline) contention resolution schemes and related material </a> (by Bo Waggoner).
+                </li>
+
+            </ol>
+        </div>
+
+        <div class="weekly-classes">
+            <b>Thompson Sampling:</b><br><br>
+            This is a widely used heuristic in practice for multi-armed bandit problems.
+            <ol type="a" start="4">
+                <li><a target="_blank"
+                       href="https://arxiv.org/pdf/1209.2388v3">
+                    Further optimal regret bounds for thompson sampling.</a> (by Shipra Agrawal, Navin Goyal).
+                </li>
+                <li><a target="_blank"
+                       href="https://www.stat.berkeley.edu/~bartlett/courses/2014fall-cs294stat260/readings.html">
+                    Background and related material</a> (useful set of links from Bartlett for a Berkeley course).
+                </li>
+
+            </ol>
+        </div>
+        <div class="weekly-classes">
+            <b>Set Covering:</b><br>
+            <ol type="a" start="6">
+                <li><a target="_blank"
+                       href="https://www.cs.cmu.edu/~anupamg/papers/focs08-setcover.pdf">
+                    Set Covering with our eyes closed </a> (by Grandoni et al. at FOCS 2008).
+                </li>
+            </ol>
+        </div>
+
+        <div class="weekly-classes">
+            <b>Regret for smooth and strongly convex functions:</b><br><br>
+            The paper below shows T^{1/2} regret:
+            <ol type="a" start="7">
+                <li><a target="_blank"
+                       href="http://papers.nips.cc/paper/5377-bandit-convex-optimization-towards-tight-bounds.pdf">
+                    Bandit Convex Optimization: Towards tight bounds</a> (by Hazan and Levy, Neurips'14).
+                </li>
+                <li>Lower bound can be found in: <a target="_blank"
+                                                    href="https://arxiv.org/pdf/1209.2388v3.pdf">
+                    On the complexity of bandit and derivative-free stochastic convex optimizationl</a> (by Ohad
+                    Shamir'13).
+                </li>
+
+            </ol>
+        </div>
+
+        <div class="weekly-classes">
+            <b>Markov Paging</b><br><br>
+            A polynomial time strategy for page requests arriving from a Markov Process.
+            <ol type="a" start="9">
+                <li>Section 5.3.2 in
+                    <a target="_blank"
+                       href="https://www.amazon.com/Online-Computation-Compet-Analysis-Borodin/dp/0521619467">Online
+                        Computation and Competitive Analysis:</a> Allan Borodin and Ran El Yaniv's book.
+                </li>
+                <li><a target="_blank"
+                       href="https://ieeexplore.ieee.org/document/365674">
+                    IP over connection-oriented networks and distributional paging.</a>
+                    (Lund, C., Phillips, S. and Reingold, N at FOCS'94).
+                </li>
+            </ol>
+        </div>
+
+
+        <div class="weekly-classes">
+            <b>Packing Problems</b><br><br>
+            Faster Packing Covering: Improving the dependence on \epsilon for packing problems.
+            <ol type="a" start="11">
+                <li><a target="_blank"
+                       href="https://dl.acm.org/doi/10.1145/2746539.2746573">
+                    Nearly-linear time positive LP solver with faster covergence rate.</a> (Allen-Zhu and Orecchia at
+                    STOC 2015).
+                </li>
+                <li><a target="_blank"
+                       href="http://www.cs.cmu.edu/~arielpro/15896/schedule.html">
+                    Notes for lectures 3 and 4</a> (by Blum and Procaccia from course CMU 15-896 - Spring'13).
+                </li>
+
+            </ol>
+        </div>
+
+        <div class="weekly-classes">
+            <b>Regret and Correlated Equilibria</b><br>
+            <ol type="a" start="13">
+                <li><a target="_blank"
+                       href="https://www.cs.cmu.edu/~avrim/Papers/regret-chapter.pdf">
+                    Learning, Regret minimization, and Equilibria </a> (Survey chapter by A. Blum and Y. Mansour).
+                </li>
+
+            </ol>
+        </div>
+
+        <div class="weekly-classes">
+            <b>Online learning on graphs</b><br>
+            <ol type="a" start="14">
+                <li><a target="_blank"
+                       href="https://proceedings.mlr.press/v40/Alon15.html">
+                    Online Learning with Feedback Graphs </a> (by Alon, Cesa-Bianchi, Dekel, Koren).
+                </li>
+
+            </ol>
+        </div>
+    </div>
+</div>
+
+<hr>
+<i>Prepared and Maintained by Arindam Khan, </i>
+<hr>
+</body>
+</html>
