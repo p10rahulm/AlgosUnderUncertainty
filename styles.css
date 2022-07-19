@@ -25,13 +25,15 @@
     margin: 25px;
 }
 .section H3 {
-    color: #00a1bd;
-    color: #009d54d9;
+    /*color: #00a1bd;*/
+    /*color: #009d54d9;*/
+    color: rgba(0, 129, 154, 0.85);
 }
 
 body H2{
     /*color: #48a9fd;*/
-    color: #009d54d9;
+    /*color: #009d54d9;*/
+    color: rgba(0, 129, 154, 0.85);
     text-align: center;
 }
 
