@@ -24,6 +24,16 @@
     border-radius: 5px;
     margin: 25px;
 }
+.section H3 {
+    color: #00a1bd;
+    color: #009d54d9;
+}
+
+body H2{
+    /*color: #48a9fd;*/
+    color: #009d54d9;
+    text-align: center;
+}
 
 .inside-section {
     padding: 10px 15px 5px 15px;
@@ -43,7 +53,16 @@
     padding: 2px 0px 2px min(20px, 2vw);
 }
 
-
+#instructors{
+    padding-top: 15px;
+}
+#header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 5px 15px 5px #f4f4f4;
+}
 
 a {
     text-decoration: none;

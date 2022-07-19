@@ -10,11 +10,22 @@
     <link rel="stylesheet" href="styles.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">
+        function adjustHeight() {
+            var height = document.getElementById("header").offsetHeight;
+            document.getElementById("instructors").style.marginTop = height + 'px';
+        }
+        window.onload = adjustHeight;
+
+    </script>
 </head>
 <body>
 
+<div id="header">
 <h2>E0 215: Algorithms under Uncertainty, Fall 2022</h2>
-<dl>
+</div>
+
+<dl id="instructors">
     <dd><b>Instructors</b>:
         <a target="_blank" href="https://www.csa.iisc.ac.in/~barman/">Siddharth Barman</a>
         and
@@ -30,7 +41,7 @@
 </dl>
 
 
-<div class="section links-container">
+<div class="section links-container" id="page-links">
     <div class="links-item"><a href="#description">Course Description</a></div>
     <div class="links-item"><a href="#lectures">Lectures</a></div>
     <div class="links-item"><a href="#projects">Projects</a></div>
