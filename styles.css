@@ -45,7 +45,8 @@
 }
 
 body {
-    font-family: 'Times New Roman','Amiri',serif;
+    font-family: 'Ibarra Real Nova','Times New Roman','Amiri',serif;
+    font-weight: 500;
 }
 body H2{
     /*color: #48a9fd;*/
