@@ -89,6 +89,7 @@ body H2{
     max-width: 1000px;
     margin: auto;
 }
+
 #contents a {
     text-decoration: none;
     color: inherit;
@@ -105,3 +106,7 @@ body H2{
     background-size: 0 1px, 100% 1px;
 }
 
+#footer{
+    font-family: 'Cormorant SC','Roboto Slab','Raleway Thin', 'Raleway', serif;
+    /*font-weight: 600;*/
+}
