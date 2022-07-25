@@ -11,9 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-<!--    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Josefin+Sans:wght@100;400&family=Josefin+Slab:wght@300&family=Raleway:wght@100;300&family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">-->
+    <!--    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Josefin+Sans:wght@100;400&family=Josefin+Slab:wght@300&family=Raleway:wght@100;300&family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">-->
 
-    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500&family=Josefin+Sans:wght@300;400&family=Cormorant+SC:wght@400&family=Amiri&family=Josefin+Slab:wght@300&family=Raleway:wght@100;300&family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500&family=Josefin+Sans:wght@300;400&family=Cormorant+SC:wght@400&family=Amiri&family=Josefin+Slab:wght@300&family=Raleway:wght@100;300&family=Roboto+Slab:wght@100&display=swap"
+          rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles.css">
 
@@ -25,7 +26,7 @@
         }
 
         window.onload = adjustHeight;
-        window.smoothScroll = function(target) {
+        window.smoothScroll = function (target) {
             var scrollContainer = target;
             do { //find scroll container
                 scrollContainer = scrollContainer.parentNode;
@@ -39,10 +40,13 @@
                 targetY += target.offsetTop;
             } while (target = target.offsetParent);
 
-            scroll = function(c, a, b, i) {
-                i++; if (i > 30) return;
+            scroll = function (c, a, b, i) {
+                i++;
+                if (i > 30) return;
                 c.scrollTop = a + (b - a) / 30 * i;
-                setTimeout(function(){ scroll(c, a, b, i); }, 20);
+                setTimeout(function () {
+                    scroll(c, a, b, i);
+                }, 20);
             }
             // start scrolling
             scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
@@ -76,6 +80,14 @@
             Rahul Madhavan
             <br>
         </dd>
+        <dd><b>Course Level</b>:
+            200
+            <br>
+        </dd>
+        <dd><b>Number of Credits</b>:
+            3:1
+            <br>
+        </dd>
         <dd><b>Time</b>: Tuesdays &amp; Thursdays, 02:00 PM-03:30 PM, CSA 112. <br>
         </dd>
     </dl>
@@ -85,7 +97,22 @@
         <h3><a name="description"></a>Course Description</h3>
         <div class="inside-section">
             <p>
-                <b>Tentative topics:</b> Basics of Probability, and various other topics
+                <b>Motivations and Objectives:</b> : In many domains the input arrives over time and an algorithm is
+                required to make its current decision without knowing the future in its entirety. This requirement---of
+                online decision making with uncertain inputs---naturally appears in various real-world settings, such as
+                such as ad allocations and job scheduling. This course will cover multiple algorithmic approaches that
+                have been developed for dealing with such algorithmic problems involving uncertainty. These techniques
+                are quite diverse and span several research areas including (i) competitive analysis of algorithms, (ii)
+                regret minimization and online convex optimization in theoretical machine learning (iii) stochastic
+                approaches such as multi-armed bandits and prophet inequalities.<br>
+                <br>
+                In this course, we address both classical works and several recent developments in these fields. Another
+                goal of the course will be to understand the strengths and weakness (lower bounds) of various design
+                methodologies.
+            </p>
+            <p>
+                <b>Course Methodology:</b> The course will have a significant project component. This will engage the
+                students to explore active research fronts in the above-mentioned topics.
             </p>
             <p>
                 <b>Intended audience:</b> Graduate students in computer science and mathematics with theoretical
@@ -93,15 +120,51 @@
                 Interested undergraduate students with very strong mathematical skills.
             </p>
             <p>
-                <b>Prerequisites</b>: Mathematical maturity and a solid background in math
-                (probability, algorithms, elementary combinatorics, graph theory, discrete probability, algebra,
-                calculus)
-                and theoretical computer science (big-O/Omega/Theta, P/NP, basic fundamental algorithms).
+                <b>Prerequisites</b>: E0 225 (Design and Analysis of Algorithms) is a soft prerequisite. Alternatively,
+                a foundational understanding of algorithms and sufficient mathematical maturity will suffice.
+                For example, a background in math (probability, elementary combinatorics, graph theory, discrete
+                probability, calculus) and theoretical computer science (big-O/Omega/Theta, P/NP, basic fundamental
+                algorithms) will help.
             </p>
             <p>
                 <b>Grading:</b> 40% HW, 30% Projects, 30% Final.
             </p>
         </div>
+    </div>
+    <div class="section">
+        <h3><a name="topics"></a>Tentative Topics</h3>
+        <p>
+            The following topics will likely be covered in the course:
+        <ol type="a" start="1">
+            <li>
+                <b>Online Algorithms:</b>
+                Ski-rental problem and paging, Yao's minimax lemma and lower bounds. Online bin packing and
+                scheduling. Online matching (ranking, application of linear programming via dual-fitting and
+                primal-dual schema). Online set cover.
+            </li>
+            <li>
+                <b>Dynamic Algorithms:</b>
+                Dynamic matching and set cover.
+            </li>
+            <li>
+                <b>Sreaming Algorithms:</b>
+                Finding frequent elements, Misra-Gries algorithm. Finding moments of data stream. Finding frequent
+                items by sketching: Count-Min Sketch. AMS Estimator. Communication Complexity and connection with
+                Streaming Algorithms.
+            </li>
+            <li>
+                <b>Online Learning and Bandits:</b>
+                Multiplicative-weights algorithm, Follow the leader, Regularization, Online convex optimization,
+                Gradient Descent and Mirror Descent. Upper confidence bound algorithm and median elimination.
+                Combining competitive ratio and regret.
+            </li>
+            <li>
+                <b>Stochastic Settings:</b>
+                Markov Decision Processes, Index Policies, Gittins Index. Prophet Inequalities.
+            </li>
+        </ol>
+
+        </p>
     </div>
     <div class="section">
         <h3><a name="lectures"></a>Lecture Schedule</h3>
@@ -303,17 +366,37 @@
             We will be teaching materials from multiple books/sources. Some of them are the following.<br><br>
             <div class="weekly-classes">
                 <b>Books:</b><br>
+                Since the course topics span several fields, we will be teaching material from multiple books/sources.
                 <ol type="a" start="1">
-                    <li><a target="_blank"
-                           href="https://www.amazon.com/Online-Computation-Compet-Analysis-Borodin/dp/0521619467">Online
-                        Computation and Competitive Analysis:</a> Allan Borodin and Ran El Yaniv (An old but
-                        comprehensive
-                        book for pre-2000 algorithms).
+                    <li>Allan Borodin, and Ran El-Yaniv.
+                        <a target="_blank"
+                           href="https://www.amazon.com/Online-Computation-Compet-Analysis-Borodin/dp/0521619467">
+                            Online Computation and Competitive Analysis:</a> Cambridge University Press, 2005.
                     </li>
-                    <li><a target="_blank"
-                           href="https://www.amazon.in/Online-Algorithms-Lecture-Computer-Science/dp/3540649174/">
-                        Online Algorithms: The State of the Art</a> (Important algorithms from pre-1998).
+                    <li>Blum, Hopcroft, and Kannan.
+                        <a target="_blank"
+                           href="https://www.amazon.in/Foundations-Data-Science-Avrim-Blum/dp/9386279800">Foundations
+                            of Data Science.</a>
                     </li>
+                    <li>Muthukrishnan.
+                        <a target="_blank"
+                          href="https://www.cs.princeton.edu/courses/archive/spr04/cos598B/bib/Muthu-Survey.pdf">
+                            Data streams: Algorithms and applications.</a> Now Publishers Inc, 2005.
+                    </li>
+                    <li>Lattimore and Szepesvari.
+                        <a target="_blank"
+                           href="https://tor-lattimore.com/downloads/book/book.pdf">
+                            Bandit Algorithms.</a> Cambridge University Press, 2020.
+                    </li>
+                    <li>Hazan.
+                        <a target="_blank" href="https://arxiv.org/abs/1909.05207">
+                            Introduction to Online Convex Optimization.</a> Now Publishers Inc, 2016.
+                    </li>
+                    <li>Roughgarden (Ed.).
+                        <a target="_blank" href="https://arxiv.org/abs/1806.09817">
+                            Beyond the Worst-Case Analysis of Algorithms.</a> Cambridge University Press, 2021.
+                    </li>
+
                 </ol>
             </div>
             <div class="weekly-classes">
@@ -630,9 +713,9 @@
 </div>
 
 <div style="text-align: center" id="footer">
-<hr>
-Prepared and maintained by Siddharth Barman, Arindam Khan and Rahul Madhavan
-<hr>
+    <hr>
+    Prepared and maintained by Siddharth Barman, Arindam Khan and Rahul Madhavan
+    <hr>
 </div>
 </body>
 </html>
